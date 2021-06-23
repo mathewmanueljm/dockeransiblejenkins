@@ -20,7 +20,7 @@
         name: docker-py
         state: present
     - name: Install httpd
-      yum:
+      package:
         name: httpd
         state: present
     - name: start http

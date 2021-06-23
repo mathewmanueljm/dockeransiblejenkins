@@ -19,6 +19,15 @@
       pip:
         name: docker-py
         state: present
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: present
+    - name: start http
+      service:
+        name: httpd
+        state: started
+        enabled: yes
     - name: Start the container
       docker_container:
         name: project05

@@ -30,7 +30,7 @@
         enabled: yes
     - name: Start the container
       docker_container:
-        name: project05
+        name: webserver
         image: "mathewmanueljm/project05:{{DOCKER_TAG}}"
         state: started
         published_ports:
